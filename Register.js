@@ -76,6 +76,7 @@ document.getElementById('btn').addEventListener('click', function(){
     }
     
     if(check){
+            
             var user = {
                 'username':uname,
                 'password':pswd,
@@ -85,9 +86,18 @@ document.getElementById('btn').addEventListener('click', function(){
                 'gender':gender
             };
             users.push(user);
-            addUser(user);
             localStorage.a_users = JSON.stringify(users);
+            addUser(user);
+            //localStorage.a_users.clear();
     }
+    
+    document.getElementById('uname').value = "";
+    document.getElementById('pwd').value = "";
+    document.getElementById('email').value="";
+    document.getElementById('loc').value = "";
+    document.getElementById('comp').value ="";
+    document.getElementById('rdMale').checked = false;
+    document.getElementById('rdFemale').checked = false;
 })
 
 
