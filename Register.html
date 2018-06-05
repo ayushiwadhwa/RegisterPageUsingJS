@@ -7,37 +7,50 @@
             <div class="registerHeader">Register</div>
             <form method="get">
                 <div class="regForm">
-                <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Username" id="uname" />
+                    <div class="txtAttribute">
+                        <input class="txt" type="text" placeholder="Username" id="uname" />
+                    </div>
+
+                    <div class="txtAttribute">
+                        <input class="txt" type="text" placeholder="Password" id="pwd" />
+                    </div>
+
+                    <div class="txtAttribute">
+                        <input class="txt" type="text" placeholder="Email" id="email" />
+                    </div>
+
+                    <div class="txtAttribute">
+                        <input class="txt" type="text" placeholder="Location" id="loc" />
+                    </div>
+
+                    <div class="txtAttribute">
+                        <input class="txt" type="text" placeholder="Company" id="comp" />
+                    </div>
+
+                    <div class="radioAtt">
+                        Gender: 
+                        <input type="radio" name ="gender" id="rdMale" value="Male" />Male
+                        <input type="radio" name="gender" id="rdFemale" value="Female"/>Female
+                    </div>
+                    <input type="hidden" id="hid">
+                    <div class="btn">
+                        <input type="button" value="Submit" id="btn" class="btnSub" />
+                    </div>
                 </div>
-                 
-                <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Password" id="pwd" />
-                </div>
-                
-                <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Email" id="email" />
-                </div>
-                
-                <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Location" id="loc" />
-                </div>
-                
-                <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Company" id="comp" />
-                </div>
-                
-                <div class="radioAtt">
-                    Gender: 
-                    <input type="radio" name ="gender" id="rdMale" value="Male" />Male
-                    <input type="radio" name="gender" id="rdFemale" value="Female"/>Female
-                </div>
-                <input type="hidden" id="hid">
-                <div class="btn">
-                    <input type="button" value="Submit" id="btn" class="btnSub" />
-                </div>
-        </div>
             </form>
+                
+            <div class="usrDtlsHeader">User Details</div>   
+            <table id="usrTable">
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Company</th>
+                    <th>Gender</th>
+                </tr>
+            </table>
+        
+            
         <script type="application/javascript" src="Register.js"></script>
     </body>
 </html>

@@ -1,3 +1,16 @@
+var users = [];
+if(localStorage.a_users) {
+    users = JSON.parse(localStorage.a_users);
+    
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    if(localStorage.a_users){
+       displayUsers(users); 
+    }
+});
+
+
 document.getElementById('btn').addEventListener('click', function(){
     
     var err_elems = document.querySelectorAll('div[id^="div_err"]');
@@ -63,11 +76,6 @@ document.getElementById('btn').addEventListener('click', function(){
     }
     
     if(check){
-            var users = [];
-            if(localStorage.a_users) {
-                users = JSON.parse(localStorage.a_users);
-                //displayUsers(users);
-            }
             var user = {
                 'username':uname,
                 'password':pswd,
@@ -77,6 +85,27 @@ document.getElementById('btn').addEventListener('click', function(){
                 'gender':gender
             };
             users.push(user);
+            addUser(user);
             localStorage.a_users = JSON.stringify(users);
     }
 })
+
+
+function displayUsers(users){
+    var usrTable=document.getElementById('usrTable');
+    var body = usrTable.tBodies[0];
+    var rows = body.rows;
+    //console.log(rows.length);
+    
+    for(var user of users){
+        rows[rows.length - 1].insertAdjacentHTML('afterend', "<tr><td>"+user.username+"</td><td>"+user.email+"</td><td>"+user.location+"</td><td>"+user.company+"</td><td>"+user.gender+"</td></tr>");
+    }
+}
+
+function addUser(user){
+    var usrTable=document.getElementById('usrTable');
+    var body = usrTable.tBodies[0];
+    var rows = body.rows;
+    
+    rows[rows.length - 1].insertAdjacentHTML('afterend', "<tr><td>"+user.username+"</td><td>"+user.email+"</td><td>"+user.location+"</td><td>"+user.company+"</td><td>"+user.gender+"</td></tr>");
+}
