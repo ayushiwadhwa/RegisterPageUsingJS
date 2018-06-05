@@ -1,0 +1,47 @@
+body{
+    margin: 0 auto;
+    width: 50%;
+    font-size: 14px;
+}
+
+.container{
+    width: 100%;
+    border: 1px solid cadetblue;
+}
+
+.registerHeader{
+    background-color: cadetblue;
+    height: 6%;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+.regForm{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.txtAttribute{
+    margin-top: 15px;
+}
+
+.txt{
+    height: 30px;
+    width: 100%;
+}
+
+.radioAtt{
+    margin-top: 15px;   
+}
+
+.btn{
+    margin: 15px auto 0px 32%;
+}
+
+.btnSub{
+    background: cadetblue;
+    color: white;
+    border-radius: 4px;
+}
