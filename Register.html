@@ -5,7 +5,8 @@
     <body>
         <div class="container">
             <div class="registerHeader">Register</div>
-            <div class="regForm">
+            <form method="get">
+                <div class="regForm">
                 <div class="txtAttribute">
                     <input class="txt" type="text" placeholder="Username" id="uname" />
                 </div>
@@ -19,23 +20,24 @@
                 </div>
                 
                 <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Location" id="pwd" />
+                    <input class="txt" type="text" placeholder="Location" id="loc" />
                 </div>
                 
                 <div class="txtAttribute">
-                    <input class="txt" type="text" placeholder="Company" id="pwd" />
+                    <input class="txt" type="text" placeholder="Company" id="comp" />
                 </div>
                 
                 <div class="radioAtt">
                     Gender: 
-                    <input type="radio" /> Male
-                    <input type="radio" /> Female
+                    <input type="radio" name ="gender" id="rdMale" value="Male" />Male
+                    <input type="radio" name="gender" id="rdFemale" value="Female"/>Female
                 </div>
-                
+                <input type="hidden" id="hid">
                 <div class="btn">
                     <input type="button" value="Submit" id="btn" class="btnSub" />
                 </div>
         </div>
+            </form>
         <script type="application/javascript" src="Register.js"></script>
     </body>
 </html>
